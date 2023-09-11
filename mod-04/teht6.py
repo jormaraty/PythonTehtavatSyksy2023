@@ -19,7 +19,7 @@ simulointiLkm = int(input("Kuinka monta (x,y) pistettä arvotaan: "))
 # arvottujen pisteiden lkm, aluksi = 0
 arvottu = 0
 
-# sisällä (etäisyys alle 1 origosta lkm), aluksi nolla.
+# sisalla (etäisyys origosta alle 1) olevien pisteiden lkm, aluksi nolla.
 sisalla = 0
 
 # toistetaan käyttäjän haluama määrä (arvottu on 0, 1, 2, ... (simulointiLkm - 1) )
@@ -36,8 +36,9 @@ while arvottu < simulointiLkm:
     # lisätään arvottujen pisteiden lukumäärää yhdellä
     arvottu += 1
 
-# lasketaan piin likiarvo saadulla kaavalla
+# simuloinnin (while-toisto) jälkeen lasketaan tulos.
+# Lasketaan piin likiarvo saadulla kaavalla
 pii = 4 * sisalla / simulointiLkm
 
 # tulostus 2 desimaalilla
-print(f"Piin likiarvoksi saatiin: {pii:.3f}")
+print(f"Piin likiarvoksi saatiin: {pii:.2f}")
