@@ -11,16 +11,20 @@ while nimi != "":
     # kysytään käyttäjältä uusi nimi
     nimi = input("Anna nimi: ")
 
-    # testaan, onko saatu nimi jo listassa vai ei.
-    # Jos nimi ei ole listassa, niin lisätään se listaan
+    # testaan, onko saatu nimi jo joukossa vai ei.
+    # Jos nimi ei ole joukossa, niin lisätään se joukkoon
     if nimi in nimet:
         print("Nimi oli jo annettu")
     else:
-        print("Uusi nimi, lisään listaan")
-        # lisätään uusi nimi listaa
-        nimet.add(nimi)
+        # lisätään nimi joukkoon vain, jos se ei ole lopetusmerkki
+        if nimi != "":
+            print("Uusi nimi, lisään joukkoon")
+            # lisätään uusi nimi joukkoon
+            nimet.add(nimi)
 
-# lopputervehdys
+# Xtra: listaan kaikki nimet joukosta ja lopputervehdys
+print("Joukkorakenteesta löytyi seuraavia nimiä: ")
+print(nimet)
 print("Kiitos ja näkemiin")
 
 
