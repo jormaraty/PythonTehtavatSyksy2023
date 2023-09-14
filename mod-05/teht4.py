@@ -3,7 +3,7 @@ kaupungit = []
 
 print("Kysyn sinulta 5 kaupungin nimeä")
 
-# Kysytään käyttäjältä viiden kaupungin nimet.
+# Kysytään käyttäjältä 5 kaupungin nimet.
 # Alla muuttuja nro saa arvot: 0, 1, 2, 3 ja 4. Eli 5 kpl.
 for nro in range(5):
     # Ekalla kertaa nro = 0 => (nro+1) = 1
