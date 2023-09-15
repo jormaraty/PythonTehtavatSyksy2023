@@ -4,8 +4,6 @@ import mysql.connector
 # Funktio hakee lentokentän nimen ja sijaintikunnan
 # parametrina saadun ICAO-koodin perustella.
 # Funktio tulostaa saadut tiedot, ei palauta mitään.
-
-
 def haeKentta(icao):
     # suoritettava sql-lauseen alkuosa
     sql = "SELECT NAME, municipality FROM airport"
@@ -33,15 +31,14 @@ def haeKentta(icao):
 
 # -- pääohjelma alkaa --
 # muodostetaan yhteys tietokantaan
-# Huom: nyt open tunnukset ovat tosi vaaralliset (oletustunnukset).
 # host='127.0.0.1' viittaa omaan koneeseen (alias on 'localhost'),
 # eli tietokannan on sijaittava omalla koneellasi.
 yhteys = mysql.connector.connect(
          host='127.0.0.1',
          port= 3306,
          database='flight_game',
-         user='root',
-         password='root',
+         user='dbuser',
+         password='sAL_a3ana',
          autocommit=True
          )
 
