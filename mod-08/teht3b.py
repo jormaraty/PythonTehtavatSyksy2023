@@ -2,6 +2,7 @@
 Ohjelma kysyy käyttäjältä kahden lentokentän ICAO-koodit.
 Ohjelma ilmoittaa lentokenttien välisen etäisyyden kilometreinä.
 Sql-lauseissa käytetään nyt parametrisoitua versiota.
+Huom: nyt oletetaan, että saadaan kunnolliset icao-koodit.
 '''
 
 import mysql.connector          # yhteys tietokantaan
