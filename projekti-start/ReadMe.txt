@@ -1,5 +1,5 @@
 ###
-Versio: su 1.10
+Versio: ma 2.10
 Versio päivittyy tarpeen mukaan.
 ###
 
@@ -21,27 +21,15 @@ Tavoite:
     Esimerkki tuntee vain Suomen lentokentät.
     Toiminnot:
         - käyttäjä voi kysyä lentoasemalla on nyt
-        - käyttäjä voi lentää toiselle kentälle (su 1.10 versio ei vielä osaa...)
+        - käyttäjä voi lentää toiselle kentälle
+        - rajoitus: käyttäjän on syötettävä validi icao-koodi, muuten ohjelma kaatuu...
 
 Toteutuksen tavoitteet:
         - pääohjelma on pieni ja selkeä
             - löytyy tiedostosta 'aloitus.py'
         - pääosa toiminnoista tapahtuu funktioissa
-        - olen laittanut pääosan funktioista moduuliin funktiot.py (tai funktiot_param.py).
+        - olen laittanut pääosan funktioista moduuliin funktiot.py
             - omat funktiot otetaan mukaan 'aloitus.py'-tiedostossa import-lauseella.
-
-Funktioista on nyt 2 eri toteutusta.
-    - esimerkissä on funktioista 2 rinnakkaista toteutusta, molemmissa on samat toiminnot.
-        - funktiot.py: funktiot on tehty kuten kurssin Python-materiaalissa on esitetty.
-        - funktiot_param.py: sql-funktioista on tehty ns. parametrisoidut versiot
-            - osa opettajista on esittänyt tämän tekniikan
-    - valitse funktioista vain toinen versio
-        - molemmissa .py-tiedostoissa on saman nimiset funktiot, toteutustapa poikkeaa hieman.
-    - valinta tapahtuu tiedostossa 'aloitus.py', siellä on rivit:
-        # ladataan omat funktiot mukaan, valitse alta jompi kumpi versio
-            from funktiot import *
-            # from funktiot_param import *
-
 
 = = = = =     = = = = =     = = = = =
 ***  Kuinka saan esimerkin toimimaan?  ***
@@ -53,10 +41,10 @@ Aloitus:
         - aloitus.py:
             - tästä ohjelman suoritus alkaa
             - sisältää ns. pääohjelman
-        - funktiot.py / funktiot_param.py
-            - vaihtoehtoisia, valitse vain jompi kumpi
-            - valinta tapahtuu 'aloitus.py'-tiedoston import lauseella, ks edeltä.
+        - funktiot.py
+            - sisältää funktioita, joissa suurin osa logiikasta tapahtuu.
     - Ohjelma on toimintavalmis, eikun kokeilemaan ja ihmettelemään.
+
 = = = = =     = = = = =     = = = = =
 
 Toivottavasti tällä pääsette eteenpäin!

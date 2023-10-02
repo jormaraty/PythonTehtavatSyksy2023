@@ -1,6 +1,7 @@
 import mysql.connector              # yhteys tietokantaan vaatii tämän.
 
 
+
 # otetaan yhteys tietokantaan.
 # host='127.0.0.1' viittaa omaan koneeseen (alias on 'localhost'),
 # eli tietokannan on sijaittava omalla koneellasi.
@@ -27,7 +28,7 @@ def info():
 # Funktio palauttaa kentän tiedot kutsujalle.
 def hae_lentokentan_tiedot(loc):
     # suoritettava sql-lause
-    sql = "SELECT ident, name, latitude_deg, longitude_deg FROM airport WHERE ident = '" + loc + "'"
+    sql = "SELECT ident, name FROM airport WHERE ident = '" + loc + "'"
     # tulostetaan sql-lause testausvaiheessa
     print(f"debug: {sql}")
 
@@ -35,8 +36,9 @@ def hae_lentokentan_tiedot(loc):
     kursori = yhteys.cursor()
     # sql-lauseen suoritus.
     kursori.execute(sql)
-    # pyydetään kursorilta yksi hakutulos (fetcone)
+    # pyydetään kursorilta yksi hakutulos (fetchone),
     tulos = kursori.fetchone()
+
     # palautetaan lentokentän tiedot kutsujalle
     return tulos
 
@@ -46,3 +48,15 @@ def tulosta_tiedot(airport):
     print("Lentokenttäsi tiedot: ")
     print(f"ICAO-koodi: {airport[0]}, Nimi: {airport[1]}")
     return
+
+
+def siirry_kentalle():
+    # kysytään käyttäjältä uuden kentän icao-koodi
+    icao = input("Anna uuden kentän ICAO-koodi: ")
+    # haetaan kentän tiedot valmiilla funktiolla
+    data = hae_lentokentan_tiedot(icao)
+
+    print("Hyvää matkaa..")
+
+    # palautetaan pääohjelmalle uuden kentän icao-koodi
+    return data[0]

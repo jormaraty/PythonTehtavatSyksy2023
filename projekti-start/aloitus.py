@@ -3,13 +3,13 @@
 '''
 
 
-# ladataan omat funktiot mukaan, valitse alta jompi kumpi versio
+# ladataan kaikki omat funktiot mukaan tiedostosta 'funktiot.py'.
 from funktiot import *                    # sql-lauseet kurssin materiaalin mukaiset, perustapa.
-# from funktiot_param import *            # sql-lauseet ovat ns. parametrisoituja
+
 
 # ohjelman globaaleja tietoja
 toiminto = '0'              # käyttäjän valitseman toiminnon numero.
-user_icao = "EFHK"          # käyttäjän lentokentän icao-koodi (aluksi Helsinki-Vantaa).
+user_icao = 'EFHK'          # käyttäjän nykyisen lentokentän icao-koodi (aluksi Helsinki-Vantaa).
 
 
 # tulostetaan käyttäjälle aloitusohjeet tms.
@@ -25,7 +25,6 @@ info()                      # löytyy 'funktiot.py' tai 'funktiot_param.py'
 while toiminto != '9':
     print("\nValitse seuraavista:")
     print("\t1 = Missä olen nyt:")
-    print("\t2 = Listaa lentokenttien ICAO-koodit:")
     print("\t3 = Mihin lennetään: ")
     print("\t9 = Lopetus")
 
@@ -40,14 +39,16 @@ while toiminto != '9':
         # tulostetaan lentokentän tiedot funktion avulla.
         tulosta_tiedot(data)
 
-    elif toiminto == '2':\
-        print("Toiminto ei ole vielä käytössä..")
+    elif toiminto == '3':
+        # funktio hoitaa lentämisen toiselle kentälle,
+        # funktio palauttaa tiedon uudesta icao-koodista,
+        new_icao = siirry_kentalle()
+        # päivitetään tieto pelaajan uudesta sijainnista
+        # globaaliin muuttujaan user_icao
+        user_icao = new_icao
 
-    elif toiminto == '3':\
-        print("Toiminto ei ole vielä käytössä..")
-
-    elif toiminto == '9':\
-        print("debug: while-toisto päättyy pian...")
+    elif toiminto == '9':
+        print("debug: while-toisto päättyy ...")
 
     else:
         print("Tuntematon toiminto")
