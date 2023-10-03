@@ -1,4 +1,6 @@
 '''
+    *** Tämä tiedosto on poistettu versiosta ma 2.10 ***
+    
     Tämä tiedosto sisältää sql-lauseista ns. parametrisoidut versiot.
     Tätä ei ole käsitelty kurssin materiaaleissa.
     Vastaavat funktiot löytyvät tiedostosta funktiot.py
