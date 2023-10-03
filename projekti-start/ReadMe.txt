@@ -20,7 +20,7 @@ Tavoite:
     Luodaan toimiva ohjelma, joka käynnistää pelin ja näyttää ohjeet käyttäjälle.
     Esimerkki tuntee vain Suomen lentokentät.
     Toiminnot:
-        - käyttäjä voi kysyä lentoasemalla on nyt
+        - käyttäjä voi kysyä millä lentoasemalla on nyt
         - käyttäjä voi lentää toiselle kentälle
         - rajoitus: käyttäjän on syötettävä validi icao-koodi, muuten ohjelma kaatuu...
 
