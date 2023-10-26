@@ -1,7 +1,6 @@
-# Auto-luokan määrittely
 import random
 
-
+# Auto-luokan määrittely
 class Auto:
     def __init__(self, rekisteritunnus, huippunopeus, nopeus = 0, matka = 0):
         self.rekisteritunnus = rekisteritunnus
