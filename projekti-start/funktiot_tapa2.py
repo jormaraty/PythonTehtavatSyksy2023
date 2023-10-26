@@ -1,6 +1,4 @@
 '''
-    *** Tämä tiedosto on poistettu versiosta ma 2.10 ***
-    
     Tämä tiedosto sisältää sql-lauseista ns. parametrisoidut versiot.
     Tätä ei ole käsitelty kurssin materiaaleissa.
     Vastaavat funktiot löytyvät tiedostosta funktiot.py
@@ -34,7 +32,7 @@ def info():
 # Funktio hakee tiedot sanakirja-muodossa.
 def hae_lentokentan_tiedot(loc):
     # sql-lause, %s paikalle tulee parametrin (icao) arvo
-    sql = "SELECT ident, name, latitude_deg, longitude_deg FROM airport WHERE ident = %s"
+    sql = "SELECT ident, name FROM airport WHERE ident = %s"
     # tehdään parametrista monikko sql-lausetta varten
     loc_monikko = (loc,)
 
@@ -43,11 +41,12 @@ def hae_lentokentan_tiedot(loc):
     # eri kenttiin voidaan viitata kentän nimillä indeksin numeron sijasta.
     kursori = yhteys.cursor(dictionary=True)
     # sql-lauseen suoritus. Nyt tarvitaan 2 parametria.
-    # varsinainen sql-lause sekä sen tarvitsemat parametrit (icao_monikko).
+    # varsinainen sql-lause sekä sen tarvitsemat parametrit (loc_monikko).
     kursori.execute(sql, loc_monikko)
-    # pyydetään kursorilta yksi hakutulos (fetcone)
+    # pyydetään kursorilta yksi hakutulos (fetchone)
     tulos = kursori.fetchone()
-    # palautetaan lentokentän tiedot kutsujalle
+
+    # palautetaan lentokentän tiedot kutsujalle,
     return tulos
 
 
@@ -56,3 +55,16 @@ def tulosta_tiedot(airport):
     print("Lentokenttäsi tiedot: ")
     print(f"ICAO-koodi: {airport['ident']}, Nimi: {airport['name']}")
     return
+
+
+def siirry_kentalle():
+    # kysytään käyttäjältä uuden kentän icao-koodi
+    icao = input("Anna uuden kentän ICAO-koodi: ")
+    # haetaan kentän tiedot valmiilla funktiolla
+    data = hae_lentokentan_tiedot(icao)
+
+    print("Hyvää matkaa..")
+
+    # palautetaan pääohjelmalle uuden kentän icao-koodi
+    return data['ident']
+
