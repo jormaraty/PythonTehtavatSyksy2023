@@ -6,7 +6,7 @@ import requests
     -   jos try-osan sisällä oleva koodi suoritetaan ilman ongelmia,
         niin except-osaa ei suoriteta ollenkaan.
     -   jos try-osassa tapahtuu poikkeustilanne (virhe), niin
-        try-osan suoritus lopetetaan välittömästi ja siirrytään except-osaan.
+        try-osan suoritus lopetetaan välittömästi ja siirrytään  except-osaan.
         Except-osion suorituksen jälkeen ei palata enää takaisin try-osan suoritukseen.
     -   Poikkeuskäsittelijä poistaa ohjelman virhetilanteen, ja ohjelma voi jatkua normaalisti.
 '''
