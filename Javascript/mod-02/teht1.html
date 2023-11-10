@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 1</title>
+</head>
+<body>
+
+    <h2>Käänteinen järjestys</h2>
+
+    <!--
+        Nyt html-sivulle ei ole määritelty tulostuspaikkaa ->
+        document.write() tulostaa html-sivun ekalle tyhjälle riville
+    -->
+
+    <script>
+        'use strict';
+
+        // tyhjä lista kokonaislukuja varten
+        let luvut = [];
+
+        // pyydetään käyttäjältä 5 kokonaislukua ja lisätään ne listaan
+        for (let i = 0; i < 5; i++) {
+            let luku = +prompt("Anna kokonaisluku: ");
+            luvut.push(luku);
+        }
+
+        // Pahus, ei saa käyttää reverse()-toimintoa.
+        // Okay, käytetään listan indeksejä lopusta alkuun eli 4, 3, 2, 1 ja 0.
+        // luvut.length palauttaa listan pituuden eli 5
+        for (let index = luvut.length - 1; index >= 0; index--)  {
+            document.write( luvut[index] + "<br>");
+        }
+
+    </script>
+
+</body>
+</html>
