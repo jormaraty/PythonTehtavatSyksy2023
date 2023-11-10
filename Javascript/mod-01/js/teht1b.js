@@ -1,5 +1,5 @@
 /*
-    Tämä tiedosto sisältää  ../teht1b.html tarvitsema js-koodit.
+    Tämä tiedosto sisältää  ../teht1b.html tarvitseman js-koodin.
  */
 
 'use strict';
