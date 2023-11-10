@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 4</title>
+</head>
+<body>
+    <h2>Lajitteluhattu</h2>
+    <p id="kohde"></p>
+
+    <!--
+        Tämä a-versio käyttää if - else if -rakennetta.
+    -->
+
+    <script>
+        'use strict';
+
+        const nimi = prompt("Mikä on nimesi: ");
+        // arvotaan tuvan numero väliltä 1 .. 4
+        const tuvanNro = Math.floor( Math.random() * 4) + 1;
+        // päätellään tuvan nimi (1 = Rohkelikko, 2 = Puuskupuh jne)
+        let tuvanNimi = 'arvoitus';
+
+        if (tuvanNro == 1) {
+          tuvanNimi = "Rohkelikko";
+        }
+        else if (tuvanNro == 2) {
+          tuvanNimi = "Puuskupuh";
+        }
+        else if (tuvanNro == 3) {
+          tuvanNimi = "Korpinkynsi";
+        }
+        else if (tuvanNro == 4) {
+          tuvanNimi = "Luihuinen";
+        }
+        else {
+          tuvanNimi = "Lajitteluhattu on huppelissa!"
+        }
+
+        // tulostettava lause, huomaa `...` merkit
+        const vastaus = `${nimi}, sinä olet ${tuvanNimi}`;
+
+        // etsitään tulostuksen paikka html-sivulta
+        const tulostusPaikka = document.querySelector('#kohde');
+        
+        // tulostetaan html-sivulle saatu vastaus
+        tulostusPaikka.innerHTML = vastaus;
+
+    </script>
+
+</body>
+</html>
