@@ -1,6 +1,5 @@
-
 /*
-      Tämä sisältää teht3.html-tiedoston tarvitseman js-koodin.
+      Tämä sisältää ../teht3b.html -tiedoston tarvitseman js-koodin.
  */
 
 'use strict';
@@ -27,5 +26,8 @@ let tulostus =
      keskiarvo = ${ka} <br>
      tulo = ${tulo}`;
 
+// etsitään tulostuksen paikka html-sivulta
+const tpaikka = document.querySelector('#jstulostus');
+
 // tulostetaan vastaus html-sivulle
-document.querySelector('#jstulostus').innerHTML = tulostus;
+tpaikka.innerHTML = tulostus;
