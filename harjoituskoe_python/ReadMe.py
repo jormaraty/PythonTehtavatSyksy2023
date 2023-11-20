@@ -1,5 +1,5 @@
 '''
-    Python harjoituskoe on tulossa ma 20.11
-    Se on vain minun arvio siitä millaisia kysymyksiä voi tulla kokeeseen..
-    jr
+    v2.0
+    Tässä muutamia tehtäviä, joiden tyyppisiä voi tulla kokeeseen.
+    Jos saat tulostettua kokeen paperille, niin sitten voi yrittää ratkaista tehtävät kuten kokeessa.
 '''
