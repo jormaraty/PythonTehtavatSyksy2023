@@ -35,14 +35,14 @@ async function haeData(nettikysely) {
     // error handling: try/catch/finally
     try {
 
-    // fetch palauttaa ns. raakadatan netistä (response-tyyppinä)
-    const response = await fetch(nettikysely);
+        // fetch palauttaa ns. raakadatan netistä (response-tyyppinä)
+        const response = await fetch(nettikysely);
 
-    // muutetaan raakadata json-dataksi
-    const jsonData = await response.json();
+        // muutetaan raakadata json-dataksi
+        const jsonData = await response.json();
 
-    // kutsutaan omaa funktiota, joka hoitaa tulosten käsittelyn
-    kasitteData(jsonData);
+        // kutsutaan omaa funktiota, joka hoitaa tulosten käsittelyn
+        kasitteData(jsonData);
 
     } catch (error) {
         console.log(error.message);
